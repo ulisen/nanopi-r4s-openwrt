@@ -34,7 +34,7 @@ jobs:
         cd /home/runner/immortalwrt
         ./scripts/feeds update -a
         ./scripts/feeds install -a
-        patch -p1 < "${GITHUB_WORKSPACE}/patches/snapshot-modify_for_x86.patch"
+        #patch -p1 < "${GITHUB_WORKSPACE}/patches/snapshot-modify_for_x86.patch"
     - name: Build ImmortalWrt-Snapshot
       run: |
         cd /home/runner/immortalwrt
