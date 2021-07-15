@@ -1,10 +1,10 @@
-## OpenWrt Firmwares for NanoPi-R4S
+## OpenWrt Firmwares for X86
 ### ⚠ WARNING: USE IT UNDER YOUR OWN RISK.
 ### ⛔️ WARNING: THIS IS DEPRECATED.
 - - -
 ## Introduction
 - ### Usage
-0. There're two versions: SHAPSHOT and 18.06, you can choose according to your preferences.<br/>
+0. There versions: SHAPSHOT.<br/>
  Please make sure at least **1G** space left on you SD card.<br/>
 1. Default login addr is [192.168.1.1](192.168.1.1), username / password: `root` / `password`.<br/>
  Please change the login password **as soon as possible** once you logined.
