@@ -67,12 +67,7 @@ jobs:
       with:
         name: immortalwrt-snapshot-immortalwrt-x86-64-generic-squashfs-sysupgrade.img.gz
         path: /home/runner/immortalwrt-snapshot-immortalwrt-x86-64-generic-squashfs-sysupgrade.img.gz
-    - name: Upload ImmortalWrt-Snapshot Firmwares to Cloud
-      timeout-minutes: 30
-      run: |
-        cd "/home/runner"
-        zip -j "immortalwrt-snapshot-immortalwrt-x86-64-generic-sysupgrade.zip" "immortalwrt-snapshot-immortalwrt-x86-64-generic-ext4-sysupgrade.img.gz" "immortalwrt-snapshot-immortalwrt-x86-64-generic-squashfs-sysupgrade.img.gz" "immortalwrt-snapshot-sha256sums"
-        ${GITHUB_WORKSPACE}/scripts/upload_firmware.py  --device-name "FriendlyARM NanoPi R4S" --device-file "immortalwrt-x86-64-generic" --immortalwrt-version "snapshot" --kernel-version "5.4" --api-id "${{ secrets.TELEGRAM_API_ID }}" --api-hash "${{ secrets.TELEGRAM_API_HASH }}" --bot-token "${{ secrets.TELEGRAM_BOT_TOKEN }}" || exit 0
+      
   Cleanup-Old-Artifacts:
     needs: [ImmortalWrt-Snapshot]
     runs-on: ubuntu-18.04
