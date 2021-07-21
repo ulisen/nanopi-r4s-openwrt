@@ -68,12 +68,13 @@ jobs:
       with:
         name: immortalwrt-snapshot-x86-64-generic-ext4-combined-efi.img.gz
         path: /home/runner/immortalwrt/bin/targets/x86/64/immortalwrt-x86-64-generic-ext4-combined-efi.img.gz
-      
-    - name: Upload ImmortalWrt-Snapshot vmdk Firmware
+
+    - name: Upload packages
       uses: actions/upload-artifact@v2
       with:
-        name: immortalwrt-snapshot-x86-64-generic-ext4-combined-vmdk.gz
-        path: /home/runner/immortalwrt/bin/targets/x86/64/immortalwrt-x86-64-generic-ext4-combined.vmdk.gz
+        name: packages
+        path: /home/runner/immortalwrt/bin/packages/
+
    Cleanup-Old-Artifacts:
     needs: [ImmortalWrt-Snapshot]
     runs-on: ubuntu-18.04
